@@ -26,4 +26,15 @@ $(document).ready(function() {
   $("#history").click(function() {
     $("li").show();
   });
+
+  $("#animal").click(function(){
+    $(".animalpics").append("<img src='img/cat.jpg' width=50%>");
+    $(".animalpics").append("<img src='img/dog.jpg' width=50%>");
+    $(this).hide();
+  });
+  
+  $(".animalpics").click(function(){
+    $("img", this).remove();
+    $("#animal").show();
+  });
 });
