@@ -9,6 +9,7 @@ $(document).ready(function() {
     $("li").hide();
     $("ul", "#cat-col").children("li").slice(0, 1).show();
     $("ul", "#dog-col").children("li").slice(0, 1).show();
+    showAnimals();
   });
 
   $("#dog-form").submit(function(event) {
@@ -21,20 +22,25 @@ $(document).ready(function() {
     $("li").hide();
     $("ul", "#cat-col").children("li").slice(0, 1).show();
     $("ul", "#dog-col").children("li").slice(0, 1).show();
+    showAnimals();
   });
 
   $("#history").click(function() {
     $("li").show();
   });
 
-  $("#animal").click(function(){
-    $(".animalpics").append("<img src='img/cat.jpg' width=50%>");
-    $(".animalpics").append("<img src='img/dog.jpg' width=50%>");
-    $(this).hide();
+  $("#animal").click(function() {
+    showAnimals();
   });
-  
+
   $(".animalpics").click(function(){
     $("img", this).remove();
     $("#animal").show();
   });
-});
+}); 
+
+function showAnimals() {
+      $(".animalpics").append("<img src='img/cat.jpg' width=50%>");
+      $(".animalpics").append("<img src='img/dog.jpg' width=50%>");
+      $("#animal").hide();
+  }

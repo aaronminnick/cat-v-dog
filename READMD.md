@@ -1,0 +1,1 @@
+KNOWN BUG: you can add lots of sets of pictures of animals.
